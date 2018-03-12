@@ -1,6 +1,11 @@
+@import '../../Sass/reset';
 @import '../../Sass/variables';
 
-.page-header {
-  font: $font-stack;
-  color: $primary;
+
+.app {
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  box-sizing: border-box;
+  text-align: center;
 }

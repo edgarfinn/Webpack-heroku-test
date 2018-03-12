@@ -1,12 +1,11 @@
 import { combineReducers } from 'redux';
-import AlbumsReducer from './reducer_albums';
-import ActiveAlbum from './reducer_active_album';
-import {reducer as formReducer} from 'redux-form';
+import { reducer as formReducer } from 'redux-form';
+
+import RepoListReducer from './reducer_repo_list';
 
 const rootReducer = combineReducers({
-  albums: AlbumsReducer,
-  activeAlbum: ActiveAlbum,
+  repoList: RepoListReducer,
   form: formReducer
-});
+})
 
 export default rootReducer;
