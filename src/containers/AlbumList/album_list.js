@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 
+import './album_list.scss'
+
 import { selectAlbum } from '../../actions/index.js';
 
 class AlbumList extends Component {
@@ -9,6 +11,7 @@ class AlbumList extends Component {
   return this.props.albumz.map(album => {
     return (
       <li
+        className="album-list-element"
         key={album.title}
         onClick={() => { this.props.selectAlbum(album)} }>
         <h4>{album.title}</h4>

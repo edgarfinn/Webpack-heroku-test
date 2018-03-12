@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import './album_detail.scss';
+
 class AlbumDetail extends Component {
   render() {
     if (!this.props.album) {
@@ -11,7 +13,7 @@ class AlbumDetail extends Component {
       )
     }
     return (
-      <div>
+      <div className="album-detail">
         <h3>Details for: {this.props.album.title}</h3>
         <p>By: {this.props.album.artist}</p>
         <p>Released: {this.props.album.released}</p>
