@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {hot} from 'react-hot-loader';
 import AlbumList from '../../containers/AlbumList/album_list';
 import AlbumDetail from '../../containers/AlbumDetail/album_detail';
 import NewAlbumForm from '../../containers/NewAlbumForm/new_album_form';
@@ -20,4 +21,4 @@ export class App extends Component {
 }
 
 
-export default App;
+export default hot(module)(App);
