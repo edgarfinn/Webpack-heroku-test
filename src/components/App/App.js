@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
-import './App.scss';
-
+import React, {Component} from 'react';
+import {hot} from 'react-hot-loader';
+import AlbumList from '../../containers/AlbumList/album_list';
+import AlbumDetail from '../../containers/AlbumDetail/album_detail';
+import NewAlbumForm from '../../containers/NewAlbumForm/new_album_form';
 import PageHeader from './PageHeader/Page_header';
-import SearchForm from '../../Containers/SearchForm/Search_form';
+
+import './App.scss';
 
 export class App extends Component {
   render() {
     return (
-      <div className="app">
+      <div>
         <PageHeader />
-        <SearchForm />
+        <AlbumList />
+        <AlbumDetail />
+        <NewAlbumForm />
       </div>
     )
   }
 }
 
-export default App;
+
+export default hot(module)(App);
