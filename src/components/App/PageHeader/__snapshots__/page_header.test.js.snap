@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header loads correctly 1`] = `
+<header
+  className="page__header"
+>
+  <i
+    aria-hidden="true"
+    className="header__icon fa fa-github-square"
+  />
+  <h1
+    className="header__title"
+  >
+    Github Repo Finder
+  </h1>
+</header>
+`;
