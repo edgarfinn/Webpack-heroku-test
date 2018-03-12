@@ -1,29 +1,41 @@
 import React from 'react';
-import {Field, reduxForm} from 'redux-form';
-import InputField from './InputField/input_field.js';
+import { Field, reduxForm } from 'redux-form';
+import SearchInput from './SearchInput/Search_input.js';
+import TypeSelect from './TypeSelect/Type_select.js';
+import SearchSubmit from './SearchSubmit/Search_submit.js';
+import {validate, warn} from './form_validation.js'
 
-const NewAlbumForm = (props) => {
+import './Search_form.scss';
+
+const SearchForm = (props) => {
 
   const onSubmit = (values) => {
-    console.log('values submitted', values);
+    console.log('submitted:',values);
   }
 
-  const {handleSubmit} = props;
+  const { handleSubmit } = props;
   return (
-    <div>
+    <section className="section__search-form">
       <form
+        className="search-form"
         onSubmit={handleSubmit(onSubmit.bind(this))}
         >
           <Field
-            name="NewAlbum"
-            component={InputField}
+            name="searchType"
+            component={TypeSelect}
           />
-
+        <Field
+          name="searchTerm"
+          component={SearchInput}
+        />
+        <SearchSubmit />
       </form>
-    </div>
+    </section>
   )
-};
+}
 
 export default reduxForm({
-  form: 'AddNewAlbum'
-})(NewAlbumForm)
+  form: 'SearchTerm',
+  validate,
+  warn
+})(SearchForm);
