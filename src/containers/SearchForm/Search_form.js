@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import SearchInput from './SearchInput/Search_input.js';
 import TypeSelect from './TypeSelect/Type_select.js';
 import SearchSubmit from './SearchSubmit/Search_submit.js';
-import {validate, warn} from './form_validation.js'
+import {validate, warn} from './form_validation.js';
 
 import './Search_form.scss';
 
